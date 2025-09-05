@@ -37,7 +37,7 @@ struct TextfieldStyle: ViewModifier {
             .background {
                 if isFocused && !isError {
                     RoundedRectangle(cornerRadius: 10)
-                        .fill(.ultraThinMaterial)
+                        .fill(.gray.opacity(0.1))
                         .stroke(.blue, style: .init(lineWidth: 2))
                 } else {
                     RoundedRectangle(cornerRadius: 10)

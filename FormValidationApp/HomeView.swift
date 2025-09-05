@@ -26,8 +26,6 @@ struct HomeView: View {
     
     var body: some View {
         ZStack {
-            Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)).ignoresSafeArea()
-            
             VStack(spacing: 20) {
                 Text("Form Validation")
                     .font(Font.largeTitle)
@@ -145,7 +143,7 @@ struct HomeView: View {
                         )
                         .onChange(of: focusedField) {
                             if (field == focusedField) {
-                                withAnimation(.easeInOut(duration: 0.4)) {
+                                withAnimation(.bouncy) {
                                     currentField = field
                                 }
                             }
@@ -159,7 +157,7 @@ struct HomeView: View {
                         )
                         .onChange(of: focusedField) {
                             if (field == focusedField) {
-                                withAnimation(.easeInOut(duration: 0.4)) {
+                                withAnimation(.bouncy) {
                                     currentField = field
                                 }
                             }
